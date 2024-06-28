@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Prediction Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Energy Prediction Model</h1>
+    <form action="/predict" method="post">
+        <label for="Depot">Depot:</label>
+        <input type="number" id="Depot" name="Depot"><br><br>
+        <label for="BusNo">Bus No.:</label>
+        <input type="number" id="BusNo" name="BusNo"><br><br>
+        <label for="BusType">Bus Type:</label>
+        <input type="number" id="BusType" name="BusType"><br><br>
+        <label for="Shift">Shift:</label>
+        <input type="number" id="Shift" name="Shift"><br><br>
+        <label for="Act_start_Month">Act_start_Month:</label>
+        <input type="number" id="Act_start_Month" name="Act_start_Month"><br><br>
+        <label for="UniqueRouteID">Unique Route ID:</label>
+        <input type="number" id="UniqueRouteID" name="UniqueRouteID"><br><br>
+        <label for="TotalKM">Total KM:</label>
+        <input type="number" id="TotalKM" name="TotalKM"><br><br>
+        <label for="Hour">Hour:</label>
+        <input type="number" id="Hour" name="Hour"><br><br>
+        <label for="Minute">Minute:</label>
+        <input type="number" id="Minute" name="Minute"><br><br>
+        <label for="Act_start_Day_of_Week">Act_start_Day_of_Week:</label>
+        <input type="number" id="Act_start_Day_of_Week" name="Act_start_Day_of_Week"><br><br>
+        <label for="Act_start_Season">Act_start_Season:</label>
+        <input type="number" id="Act_start_Season" name="Act_start_Season"><br><br>
+        <label for="temp">Temperature:</label>
+        <input type="number" id="temp" name="temp"><br><br>
+        <label for="icon">Icon:</label>
+        <input type="number" id="icon" name="icon"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    <br>
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
+
+
+
+
